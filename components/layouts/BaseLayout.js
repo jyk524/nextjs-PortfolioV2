@@ -1,9 +1,10 @@
 import Header from "../shared/Header";
 
-const BaseLayout = () => {
+const BaseLayout = (props) => {
   return (
     <>
       <Header />
+      {props.children}
     </>
   );
 };
