@@ -1,6 +1,7 @@
 import BaseLayout from "../components/layouts/BaseLayout";
 import axios from "axios";
 
+//
 const Portfolios = ({ posts }) => {
   console.log(posts);
   return (
@@ -9,7 +10,7 @@ const Portfolios = ({ posts }) => {
     </BaseLayout>
   );
 };
-
+// Pull Posts
 Portfolios.getInitialProps = async () => {
   let posts = [];
   try {
