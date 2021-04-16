@@ -3,10 +3,14 @@ import axios from "axios";
 
 //
 const Portfolios = ({ posts }) => {
-  console.log(posts);
+  // map through fetched posts
+  const renderPosts = () => {
+    return posts.map((post) => <li key={post.id}>{post.title}</li>);
+  };
   return (
     <BaseLayout>
       <h1>Portfolios h1</h1>
+      <ul>{renderPosts()}</ul>
     </BaseLayout>
   );
 };
