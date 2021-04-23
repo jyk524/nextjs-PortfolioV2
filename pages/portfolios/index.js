@@ -1,11 +1,18 @@
 import BaseLayout from "../../components/layouts/BaseLayout";
 import axios from "axios";
+import Link from "next/link";
 
 //
 const Portfolios = ({ posts }) => {
   // map through fetched posts
   const renderPosts = () => {
-    return posts.map((post) => <li key={post.id}>{post.title}</li>);
+    return posts.map((post) => (
+      <li key={post.id}>
+        <Link href={`/portfolios/${post.id}`}>
+          <a>{post.title}</a>
+        </Link>
+      </li>
+    ));
   };
   return (
     <BaseLayout>
