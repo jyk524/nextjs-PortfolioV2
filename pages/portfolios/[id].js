@@ -2,14 +2,21 @@ import BaseLayout from "../../components/layouts/BaseLayout";
 import { useRouter } from "next/router";
 import axios from "axios";
 
-const Portfolio = ({ post }) => {
+const Portfolio = ({ portfolio }) => {
+  debugger;
+  const name = "James";
+
+  function helloWorld() {
+    console.log(name);
+  }
+
   const router = useRouter();
   return (
     <BaseLayout>
       <h1>Portfolio Page</h1>
-      <h1>{post.title}</h1>
-      <p>BODY: {post.body}</p>
-      <p>ID: {post.id}</p>
+      <h1>{portfolio.title}</h1>
+      <p>BODY: {portfolio.body}</p>
+      <p>ID: {portfolio.id}</p>
     </BaseLayout>
   );
 };
@@ -26,7 +33,7 @@ Portfolio.getInitialProps = async ({ query }) => {
     console.error(e);
   }
 
-  return { post };
+  return { portfolio: post };
 };
 
 export default Portfolio;
