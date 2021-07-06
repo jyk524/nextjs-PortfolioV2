@@ -3,13 +3,6 @@ import { useRouter } from "next/router";
 import axios from "axios";
 
 const Portfolio = ({ portfolio }) => {
-  debugger;
-  const name = "James";
-
-  function helloWorld() {
-    console.log(name);
-  }
-
   const router = useRouter();
   return (
     <BaseLayout>
